@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { FaSpinner } from "react-icons/fa";
 
 function Register() {
   let navigate = useNavigate();
@@ -175,7 +176,7 @@ function Register() {
             type="submit"
             onSubmit={registerForm.handleSubmit}
           >
-            {isLoading ? <i className="fa fa-spinner fa-spin"></i> : "Register"}
+            {isLoading ? <FaSpinner /> : "Register"}
           </button>
         </form>
       </div>
