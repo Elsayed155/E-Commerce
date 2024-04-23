@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useNavigate } from "react-router-dom";
+import { CiInstagram } from "react-icons/ci";
+import { FaFacebook } from "react-icons/fa";
+
 import logo from "../../Assets/images/logo.svg";
 import { TokenContext } from "../../Context/Token";
 import { CartContent } from "../../Context/CartContent";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Navbar() {
   let { token, setToken } = useContext(TokenContext);
   let { numberOfCartItem } = useContext(CartContent);
@@ -75,8 +79,8 @@ function Navbar() {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item align-self-center">
-                <i className="fa-brands fa-instagram mx-1"></i>
-                <i className="fa-brands fa-facebook mx-1"></i>
+                <CiInstagram className="mx-1" />
+                <FaFacebook />
                 <i className="fa-brands fa-linkedin mx-1"></i>
               </li>
 
