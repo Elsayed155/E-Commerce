@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import styles from "./Login.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { FaSpinner } from "react-icons/fa";
+
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { TokenContext } from "../../Context/Token";
@@ -108,7 +110,7 @@ function Login() {
             type="submit"
             onSubmit={loginForm.handleSubmit}
           >
-            {isLoading ? <i className="fa fa-spinner fa-spin"></i> : "Login"}
+            {isLoading ? <FaSpinner /> : "Login"}
           </button>
         </form>
       </div>

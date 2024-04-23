@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import { CiInstagram } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
 import { FaFacebook } from "react-icons/fa";
 
 import logo from "../../Assets/images/logo.svg";
@@ -79,9 +81,9 @@ function Navbar() {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item align-self-center">
-                <CiInstagram className="mx-1" />
-                <FaFacebook />
-                <i className="fa-brands fa-linkedin mx-1"></i>
+                <FaInstagram className="mx-1" />
+                <FaFacebook className="mx-1" />
+                <FaLinkedin className="mx-1" />
               </li>
 
               {token ? (

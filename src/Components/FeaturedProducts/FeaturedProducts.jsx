@@ -1,6 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "./FeaturedProducts.module.css";
 import axios from "axios";
+import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
+
+import { FaStar } from "react-icons/fa";
+
 import { date } from "yup";
 import { BallTriangle } from "react-loader-spinner";
 import { useQuery } from "react-query";
@@ -145,22 +150,23 @@ function FeaturedProducts() {
                       <div className="d-flex justify-content-between">
                         <p>{ele.price} EGP</p>
                         <p>
-                          <i className="fa fa-star rating-color"></i>
+                          <FaStar className="rating-color" />
+
                           {ele.ratingsAverage}
                         </p>
                       </div>
                     </div>
                   </Link>
                   {ele.isWish ? (
-                    <i
-                      className={"fa-solid fa-heart mx-2 "}
+                    <FaHeart
+                      className="mx-2"
                       onClick={() => removeWishlist(ele.id)}
-                    ></i>
+                    />
                   ) : (
-                    <i
-                      className={"fa-regular fa-heart mx-2 "}
+                    <CiHeart
+                      className="mx-2"
                       onClick={() => addWishlist(ele.id)}
-                    ></i>
+                    />
                   )}
                   <button
                     className="btn bg-main text-white w-100 my-2"

@@ -4,6 +4,10 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { BallTriangle } from "react-loader-spinner";
+import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
+
+import { FaStar } from "react-icons/fa";
 import Slider from "react-slick";
 import toast from "react-hot-toast";
 import { CartContent } from "../../Context/CartContent";
@@ -123,22 +127,21 @@ function Details() {
               <p>{details.description}</p>
               <p>{details.category.name}</p>
               {details.isWish ? (
-                <i
-                  className={"fa-solid fa-heart mx-2 "}
+                <FaHeart
+                  className="mx-2"
                   onClick={() => removeWishlist(details._id)}
-                ></i>
+                />
               ) : (
-                <i
-                  className={"fa-regular fa-heart mx-2 "}
+                <CiHeart
+                  className="mx-2"
                   onClick={() => addWishlist(details._id)}
-                ></i>
+                />
               )}
               <div className="d-flex justify-content-between">
                 <h5>{details.price} EGP</h5>
                 <h5>
                   {" "}
-                  <i className="fa fa-star rating-color "></i>{" "}
-                  {details.ratingsAverage}
+                  <FaStar className="rating-color" /> {details.ratingsAverage}
                 </h5>
               </div>
               <button
