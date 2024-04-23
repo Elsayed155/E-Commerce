@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+// import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+// import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
 import './index.css';
 import TokenContextProvider from './Context/Token';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import App from './App';
-import {ReactQueryDevtools} from "../node_modules/react-query/es/devtools/devtools" 
+// import {ReactQueryDevtools} from "../node_modules/react-query/es/devtools/devtools" 
 import reportWebVitals from './reportWebVitals';
 import { QueryClient,QueryClientProvider } from 'react-query';
 import CartContentProvider from './Context/CartContent.js';
@@ -21,7 +21,6 @@ root.render(
     <TokenContextProvider>
     <App />
     </TokenContextProvider>
-    <ReactQueryDevtools></ReactQueryDevtools>
  </QueryClientProvider>
  </CartContentProvider>
   
